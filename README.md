@@ -8,7 +8,7 @@ A simple quiz application built with Python and tkinter. Users can select a quiz
 2. Download the project files to your computer.
 3. Open a terminal or command prompt.
 4. Navigate to the project directory.
-5. Run `python quiz_bowl_app.py` to start the quiz.
+5. Run `APP.py` to start the quiz.
 
 ## How to Use
 - Select a quiz category from the dropdown menu.

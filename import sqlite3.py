@@ -50,13 +50,29 @@ adv_finance_data = [
 # Insert questions for 'Python'
 python_questions = [
     ("Python", "What is the correct way to define a function in Python?", "def myFunction():", "function myFunction():", "create myFunction():", "func myFunction():", "A"),
-    # Add the rest of your 'Python' questions here
+    ("Python", "Which of the following data types is immutable?", "Tuple", "List", "Dictionary", "Set", "A"),
+    ("Python", "How do you insert an item at a given position in a list in Python?", "list.insert(index, item)", "list.add(item, index)", "list.append(index, item)", "list.set(index, item)", "A"),
+    ("Python", "What keyword is used to create a class in Python?", "class", "struct", "def", "object", "A"),
+    ("Python", "Which module in Python is used for mathematical tasks?", "math", "string", "random", "datetime", "A"),
+    ("Python", "How do you create a comment in Python?", "Using # at the beginning of the comment", "Using // at the beginning of the comment", "Using /* at the beginning of the comment", "Using <!-- at the beginning of the comment", "A"),
+    ("Python", "What is the output of print(2 ** 3)?", "8", "6", "9", "5", "A"),
+    ("Python", "What does the 'len()' function do in Python?", "Returns the length of an object", "Returns the size of an object", "Modifies the length of an object", "Deletes the object", "A"),
+    ("Python", "Which of the following is the correct way to declare a dictionary?", "{'key': 'value'}", "['key': 'value']", "('key': 'value')", "<'key': 'value'>", "A"),
+    ("Python", "What is a correct syntax to output 'Hello World' in Python?", "print('Hello World')", "echo 'Hello World'", "p('Hello World')", "printf('Hello World')", "A")
 ]
 
 # Insert questions for 'Computer Forensics'
 computer_forensics_questions = [
     ("Computer Forensics", "What is the primary goal of computer forensics?", "To recover and analyze data in a way that is legally admissible", "To delete data permanently", "To repair damaged software", "To enhance the speed of the computer", "A"),
-    # Add the rest of your 'Computer Forensics' questions here
+    ("Computer Forensics", "Which of the following is a common tool used in computer forensics?", "EnCase", "Photoshop", "WinRAR", "Microsoft Word", "A"),
+    ("Computer Forensics", "What is a write blocker?", "A device that prevents data from being modified on a storage device", "A software that blocks access to certain websites", "A tool that deletes data permanently", "A type of firewall", "A"),
+    ("Computer Forensics", "What is the first rule of digital forensics?", "Do not alter the original data", "Always work on the system live", "Start by making a backup", "First, delete all unnecessary files", "A"),
+    ("Computer Forensics", "Which of the following file systems is commonly used in Windows operating systems?", "NTFS", "HFS+", "ext4", "FAT32", "A"),
+    ("Computer Forensics", "What is the process of making an exact copy of a drive called?", "Imaging", "Copying", "Cloning", "Mirroring", "A"),
+    ("Computer Forensics", "Which of the following is a type of volatile memory?", "RAM", "HDD", "SSD", "ROM", "A"),
+    ("Computer Forensics", "What is steganography?", "The practice of hiding data or messages within another file", "The study of viruses and malware", "The encryption of data", "The recovery of lost files", "A"),
+    ("Computer Forensics", "In computer forensics, what is the term 'chain of custody' used for?", "Documenting the handling of evidence", "Linking a suspect to a piece of digital evidence", "Creating a backup of digital evidence", "The process of decrypting encrypted data", "A"),
+    ("Computer Forensics", "What is the primary purpose of a forensic duplicate?", "To create an exact bit-for-bit copy of digital evidence", "To compress files for easy transport", "To enhance the quality of digital images", "To convert digital files into analog", "A")
 ]
 
 database_questions = [
@@ -78,8 +94,8 @@ def insert_questions(data):
 insert_questions(adv_finance_data)
 insert_questions(python_questions)
 insert_questions(computer_forensics_questions)
-insert_questions(computer_forensics_questions)
-insert_questions(computer_forensics_questions)
+insert_questions(database_questions)
+insert_questions(finmodeling_questions)
 
 # Commit and close
 conn.commit()

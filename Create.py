@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('QData3456.db')
+conn = sqlite3.connect('newData.db')
 cursor = conn.cursor()
 
 # Create Categories table
@@ -76,26 +76,42 @@ computer_forensics_questions = [
 ]
 
 database_questions = [
-    ("Computer Forensics", "What is the primary goal of computer forensics?", "To recover and analyze data in a way that is legally admissible", "To delete data permanently", "To repair damaged software", "To enhance the speed of the computer", "A"),
-    # Add the rest of your 'Computer Forensics' questions here
+    ("Database", "What is SQL?", "Structured Query Language", "Simple Query Language", "Standard Question Language", "Sequential Query Language", "A"),
+    ("Database", "What does 'PRIMARY KEY' in SQL indicate?", "A unique identifier for each row", "A primary function key", "A non-unique identifier for each row", "A special keyword for indexing", "A"),
+    ("Database", "Which SQL statement is used to extract data from a database?", "SELECT", "EXTRACT", "GET", "PULL", "A"),
+    ("Database", "What is a foreign key?", "A key used to link two tables together", "A key that is not important", "A key that is unique in each table", "A key used to encrypt data", "A"),
+    ("Database", "What is normalization in database design?", "The process of minimizing redundancy", "The process of maximizing redundancy", "The process of deleting data", "The process of encrypting data", "A"),
+    ("Database", "Which of the following is a NoSQL database?", "MongoDB", "MySQL", "Oracle", "SQL Server", "A"),
+    ("Database", "Which command is used to remove rows from a table?", "DELETE", "REMOVE", "ERASE", "DROP", "A"),
+    ("Database", "What is the default sort order of the 'ORDER BY' clause in SQL?", "Ascending", "Descending", "Random", "Alphabetical", "A"),
+    ("Database", "What does DDL stand for in SQL?", "Data Definition Language", "Data Duplication Language", "Data Development Language", "Data Description Language", "A"),
+    ("Database", "What is a transaction in a database?", "A unit of work that is either completed in its entirety or not done at all", "A type of database model", "A request to retrieve data", "A method to increase database speed", "A")
 ]
 
-finmodeling_questions = [
-    ("Computer Forensics", "What is the primary goal of computer forensics?", "To recover and analyze data in a way that is legally admissible", "To delete data permanently", "To repair damaged software", "To enhance the speed of the computer", "A"),
-    # Add the rest of your 'Computer Forensics' questions here
+fin_modeling_questions = [
+    ("FIN Modeling", "What is financial modeling used for?", "To make informed business and financial decisions", "To track inventory", "To manage employee records", "To monitor social media trends", "A"),
+    ("FIN Modeling", "Which software is most commonly used for financial modeling?", "Microsoft Excel", "Google Sheets", "Notepad", "Microsoft Word", "A"),
+    ("FIN Modeling", "What is a 'Discounted Cash Flow' model used to estimate?", "The current value of projected future cash flows", "A company's promotional expenses", "The amount of cash in the bank", "The company's debt levels", "A"),
+    ("FIN Modeling", "In financial modeling, what does NPV stand for?", "Net Present Value", "New Product Value", "Net Private Value", "National Present Value", "A"),
+    ("FIN Modeling", "What is a 'sensitivity analysis' in financial modeling?", "A technique to predict how different values of an independent variable affect a particular dependent variable", "An analysis of a company's sensitivity to market trends", "A review of a model's font sensitivity", "An analysis of the sensitivity of the company's stock", "A"),
+    ("FIN Modeling", "What is typically the first step in building a financial model?", "Defining the model's purpose", "Selecting the model's color scheme", "Choosing the font size", "Deciding the number of sheets to use", "A"),
+    ("FIN Modeling", "What does 'WACC' stand for in financial modeling?", "Weighted Average Cost of Capital", "Wide Area Communication Channel", "Weekly Average Company Cost", "Weighted Average Credit Card", "A"),
+    ("FIN Modeling", "In a financial model, what is a 'scenario analysis' used for?", "To predict financial outcomes based on various financial scenarios", "To determine the best scenario for watching a movie", "To analyze the best-case scenario for employee vacations", "To create scenarios for company parties", "A"),
+    ("FIN Modeling", "Why is it important to use 'assumptions' in financial models?", "To provide a basis for the model's calculations and projections", "To guess the CEO's preferences", "To assume the company's success", "To make the model look complex", "A"),
+    ("FIN Modeling", "What is the primary purpose of creating financial models?", "To simulate the financial performance of a business under various conditions", "To create visual presentations for stakeholders", "To track the company's stock price", "To calculate employee bonuses", "A")
 ]
-# Function to insert questions
+
 def insert_questions(data):
     for question in data:
         cursor.execute('''INSERT INTO Questions (CategoryName, Question, AnswerOption1, AnswerOption2, AnswerOption3, AnswerOption4, CorrectAnswer)
                         VALUES (?, ?, ?, ?, ?, ?, ?);''', question)
 
-# Inserting questions into the database
+
 insert_questions(adv_finance_data)
 insert_questions(python_questions)
 insert_questions(computer_forensics_questions)
 insert_questions(database_questions)
-insert_questions(finmodeling_questions)
+insert_questions(fin_modeling_questions)
 
 # Commit and close
 conn.commit()
